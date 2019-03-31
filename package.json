@@ -1,0 +1,20 @@
+{
+  "name": "shorten-hexdcolor",
+  "version": "0.0.2",
+  "description": "asd",
+  "main": "index.js",
+  "scripts": {
+    "dev:build": "gulp build",
+    "dev:watch": "gulp watch"
+  },
+  "repository": "https://github.com/gabrodbr/shorten-hexdcolor.git",
+  "author": "Gabriel Rodrigues <jipacoding@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-uglify": "^3.0.2"
+  }
+}
