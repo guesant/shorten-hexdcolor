@@ -15,18 +15,18 @@ The best package to simplify hexadecimal colors
 ## Usage
 ### Import
 ```js
-import shortenHedxColor from 'shorten-hexdcolor';
+import shortenHexdColor from 'shorten-hexdcolor';
 // commonjs
-// const shortenHedxColor = require('shorten-hexdcolor').default;
+// const shortenHexdColor = require('shorten-hexdcolor').default;
 ```
 ### Main method
-Use the imported method above (called `shortenHedxColor`)
+Use the imported method above (called `shortenHexdColor`)
 ```javascript
 const myColor1 = "#16597B";
 const myColor2 = "A0165D";
 
-const coolColor1 = shortenHedxColor(myColor1);
-const coolColor2 = shortenHedxColor(myColor2);
+const coolColor1 = shortenHexdColor(myColor1);
+const coolColor2 = shortenHexdColor(myColor2);
 ```
 #### Output
 ```js
