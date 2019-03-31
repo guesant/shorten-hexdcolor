@@ -4,7 +4,7 @@ const uglify = require('gulp-uglify');
 
 const configs = {
 	js: {
-		src: 'src/*.js',
+		src: 'src/**/*.js',
 		output: {
 			path: 'lib/',
 		},
