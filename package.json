@@ -1,0 +1,9 @@
+{
+  "name": "shorten-hexdcolor",
+  "version": "0.0.1",
+  "description": "asd",
+  "main": "index.js",
+  "repository": "https://github.com/gabrodbr/shorten-hexdcolor.git",
+  "author": "Gabriel Rodrigues <jipacoding@gmail.com>",
+  "license": "MIT"
+}
