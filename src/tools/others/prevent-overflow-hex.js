@@ -4,7 +4,7 @@ const rotateHex = (number, add) => {
   return hexNumbers[(hexNumbers.indexOf(number) + add) % hexNumbers.length];
 }
 const validateOverflow = (number, mode) => {
-  return mode == 'next' ? hexNumbers.indexOf(number) < 14 : hexNumbers.indexOf(number) > 1
+  return mode == 1 ? hexNumbers.indexOf(number) < 14 : hexNumbers.indexOf(number) > 1
 };
 
 export default ({ mode, number }) => {
