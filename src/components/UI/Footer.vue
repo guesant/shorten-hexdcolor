@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <div>
+    <div class="CONTAINER">
       <p>
         Made with ♥ by
         <a href="https://gabrielrodrigues.dev" target="_blank">Gabriel Rodrigues</a>

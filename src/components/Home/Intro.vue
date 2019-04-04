@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="CONTAINER">
     <h1>shorten-hexdcolor</h1>
     <p>
       An easy way to memorize your colors.
