@@ -19,5 +19,7 @@ export default {
 
 <style lang="scss">
 @import '~@/assets/styles/app';
-
+html, body {
+  background-color: #E1EBF7;
+}
 </style>
