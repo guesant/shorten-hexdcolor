@@ -4,8 +4,8 @@
       <h1 class="title">Demo</h1>
 
       <main class="cards">
-        <Card title="Initial Color" />
-        <Card title="Simplified Color" />
+        <Card title="Initial Color" v-model="initialColor" />
+        <Card title="Simplified Color" :value="simplifiedColor" readonly />
 
         <Card title="Fork-me" useSlot>
           <ul>
@@ -20,11 +20,34 @@
 </template>
 
 <script>
+import shortenHexdColor from 'shorten-hexdcolor';
 import Card from '@/components/Demo/Card.vue';
 
 export default {
   components: {
     Card,
+  },
+  data() {
+    return {
+      initialColor: '089089',
+      simplifiedColor: 'VAI CAGAR SEU ADOTADO', // eu tava com raiva nessa hora, mas vou deixar xD
+    }
+  },
+  beforeMount() {
+    this.simplify();
+  },
+  methods: {
+    simplify() {
+      if(this.initialColor.length > 1) {
+        this.simplifiedColor = shortenHexdColor(this.initialColor);
+      }
+      // console.log(this.initialColor);
+    },
+  },
+  watch: {
+    initialColor() {
+      this.simplify();
+    },
   },
 };
 </script>
@@ -42,7 +65,24 @@ export default {
   .cards {
     margin-top: 4rem;
     display: grid;
-    grid-template-areas: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    border-radius: .5rem;
+    overflow: hidden;
+  }
+}
+</style>
+
+<style lang="scss" scoped>
+@media only screen and (max-width: 1000px) {
+  .demo {
+    .cards {   
+      grid-template-columns: 1fr;
+
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
 </style>

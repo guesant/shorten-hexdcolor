@@ -6973,6 +6973,11 @@ shell-quote@^1.6.1:
     array-reduce "~0.0.0"
     jsonify "~0.0.0"
 
+shorten-hexdcolor@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/shorten-hexdcolor/-/shorten-hexdcolor-0.2.0.tgz#be6fb2a8f96f6eebdcd3e17477b32cafa4e157dc"
+  integrity sha512-XXzn/tdcdlEoXLbBbc9ZLV0na4c5b8/rwDX4JZ22malhzx7tQUjqgVzC8clyp5N8pkHLzo2DY9MP5mWb9rZd0g==
+
 signal-exit@^3.0.0, signal-exit@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
