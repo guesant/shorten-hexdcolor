@@ -46,10 +46,12 @@ export default {
   },
   methods: {
     simplify() {
-      if (this.initialColor.length > 1) {
+      if (this.initialColor.length % 2 == 0) {
         this.simplifiedColor = shortenHexdColor(this.initialColor);
+      } else {
+        this.simplifiedColor = 'pls-clear';
       }
-      // console.log(this.initialColor);
+      console.log(this.initialColor);
     },
   },
   watch: {

@@ -5,12 +5,12 @@
     <div v-if="useSlot"><slot /></div>
 
     <div v-else>
-      <input 
+      <input
         type="text"
         maxlength="7"
         ref="currentColor"
 
-        :value="currentColor"
+        :value="currentColor == 'pls-clear' ? '' : currentColor"
         @input="updateColor()"
 
         :readonly="readonly">
@@ -20,25 +20,8 @@
 </template>
 
 <script>
-const defaultColorStyle = color => color.toString().toUpperCase().replace(/[^A-F0-9]/g, '').slice(0, 6);
-const oppositeColorTheme = (hexC) => {
-  const hex = hexC.toUpperCase().replace(/[^A-F0-9]/g, '');
-
-  const rgb = [0, 2, 4].map(pos => parseInt(hex.slice(pos, pos + 2), 16));
-
-  const ehCorClara = () => {
-    const red = rgb[0] * 0.299;
-    const green = rgb[1] * 0.587;
-    const blue = rgb[2] * 0.114;
-
-    return red + green + blue > 186;
-  };
-
-  if (ehCorClara() || hex.length < 2) {
-    return 'dark';
-  }
-  return 'light';
-};
+import defaultColorStyle from '@/tools/color/default-color-style';
+import oppositeColorTheme from '@/tools/color/opposite-color-theme';
 
 export default {
   props: {
@@ -62,11 +45,10 @@ export default {
   },
   computed: {
     displayColor() {
-      if(this.currentColor.length == 6) {
+      if (this.currentColor.length % 2 == 0 && this.currentColor !== 'pls-clear') {
         return this.currentColor;
-      } else {
-        return "09305C";
       }
+      return '09305C';
     },
     theme() {
       return oppositeColorTheme(this.displayColor);
@@ -74,23 +56,24 @@ export default {
   },
   watch: {
     value() {
-      if(this.value) {
+      if (this.value) {
         this.currentColor = this.value;
       }
     },
     currentColor() {
       // #ASDFGED -> ADFGED
-      this.currentColor = defaultColorStyle(this.currentColor);
-
+      if(this.currentColor !== 'pls-clear') {
+        this.currentColor = defaultColorStyle(this.currentColor);
+      }
       this.$emit('input', this.currentColor);
     },
   },
 
   beforeMount() {
-    if(this.value) {
+    if (this.value) {
       this.currentColor = this.value;
     } else {
-      this.currentColor = "09305C";
+      this.currentColor = '09305C';
     }
   },
 };
@@ -104,13 +87,14 @@ export default {
   padding: 4rem 2rem;
   transition: background-color .3s ease;
 
-  font-family: $serif-font;
 
   .title {
     margin-bottom: 2rem;
 
     font-size: 1.5rem;
     text-align: center;
+
+    font-family: $serif-font;
   }
   input {
     display: block;
@@ -122,7 +106,7 @@ export default {
 
     border: none;
     border-radius: 0.25rem;
-    
+
   }
 
   &.light {
@@ -147,9 +131,6 @@ export default {
 <style lang="scss" scoped>
 @media only screen and (max-width: 600px) {
   .card {
-    .title {
-      // font-size: 1.25rem;
-    }
     input {
       font-size: 1rem;
     }
