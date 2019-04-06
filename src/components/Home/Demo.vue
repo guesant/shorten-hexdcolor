@@ -20,7 +20,7 @@
 
 <script>
 import shortenHexdColor from 'shorten-hexdcolor';
-import Card from '@/components/Demo/Card.vue';
+import Card from '@/components/UI/Card.vue';
 import GithubButton from '@/components/Github/Button.vue';
 
 const randomColorChoose = () => {

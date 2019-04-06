@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import renderReadme from '@/tools/Readme/render-readme';
+import renderReadme from '@/tools/repo/render-readme';
 
 export default {
   data() {
