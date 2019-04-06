@@ -23,13 +23,20 @@
 import shortenHexdColor from 'shorten-hexdcolor';
 import Card from '@/components/Demo/Card.vue';
 
+const randomColorChoose = () => {
+  const colors = ['ADF039', '16597B', 'A0165D', '1786E2'];
+  const choosedIndex = Math.round(Math.random() * colors.length) - 1;
+
+  return colors[choosedIndex];
+}
+
 export default {
   components: {
     Card,
   },
   data() {
     return {
-      initialColor: '089089',
+      initialColor: randomColorChoose(),
       simplifiedColor: 'VAI CAGAR SEU ADOTADO', // eu tava com raiva nessa hora, mas vou deixar xD
     }
   },
@@ -57,7 +64,7 @@ export default {
   padding: 8rem 0;
   .title {
     font-weight: 600;
-    font-size: 36px;
+    font-size: 2.25rem;
 
     color: #030D1A;
   }
@@ -76,12 +83,36 @@ export default {
 <style lang="scss" scoped>
 @media only screen and (max-width: 1000px) {
   .demo {
+    .title {
+      text-align: center;
+    }
     .cards {   
       grid-template-columns: 1fr;
 
-      max-width: 400px;
+      max-width: 25rem;
       margin-left: auto;
       margin-right: auto;
+    }
+  }
+}
+</style>
+
+<style lang="scss" scoped>
+@media only screen and (max-width: 600px) {
+  .demo {
+    .title {
+      font-size: 1.75rem;
+    }
+
+  }
+}
+</style>
+
+<style lang="scss" scoped>
+@media only screen and (max-width: 31.25rem) {
+  .demo {
+    .title {
+      text-align: left;
     }
   }
 }

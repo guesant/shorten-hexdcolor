@@ -62,7 +62,7 @@ export default {
   },
   computed: {
     displayColor() {
-      if(this.currentColor.length == 3 || this.currentColor.length == 6) {
+      if(this.currentColor.length == 6) {
         return this.currentColor;
       } else {
         return "09305C";
@@ -97,9 +97,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import url('https://fonts.googleapis.com/css?family=Alice');
+@import '~@/assets/styles/vars/fonts';
+
 .card {
   padding: 4rem 2rem;
-  background-color: black;
+  transition: background-color .3s ease;
+
+  font-family: $serif-font;
 
   .title {
     margin-bottom: 2rem;
@@ -113,12 +118,12 @@ export default {
     padding: 1rem 0;
 
     text-align: center;
-    font-size: 18px;
+    font-size: 1.125rem;
 
     border: none;
-    border-radius: 4px;
+    border-radius: 0.25rem;
+    
   }
-
 
   &.light {
     $color: #B9CCE1;
@@ -134,6 +139,19 @@ export default {
     input {
       color: $color;
       background: rgba($color, .2);
+    }
+  }
+}
+</style>
+
+<style lang="scss" scoped>
+@media only screen and (max-width: 600px) {
+  .card {
+    .title {
+      // font-size: 1.25rem;
+    }
+    input {
+      font-size: 1rem;
     }
   }
 }

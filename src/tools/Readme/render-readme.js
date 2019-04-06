@@ -11,7 +11,7 @@ hljs.registerLanguage('sh', hljsSH);
 
 const md = mdit({
   highlight: (str, lang) => {
-    const hlpre = code => `<pre class="hljs"><code>${code}</code></pre>`;
+    const hlpre = code => `<pre class="hljs"><code class="using-hljs">${code}</code></pre>`;
 
     if (lang && hljs.getLanguage(lang)) {
       try {
