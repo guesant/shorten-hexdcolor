@@ -80,7 +80,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import url('https://fonts.googleapis.com/css?family=Alice');
 @import '~@/assets/styles/vars/fonts';
 
 .card {
