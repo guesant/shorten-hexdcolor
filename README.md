@@ -1,29 +1,28 @@
-# shorten-hexdcolor
+# Website demo for shorten-hexdcolor
+Official website link: [https://gabrodbr.github.io/shorten-hexdcolor](https://gabrodbr.github.io/shorten-hexdcolor)
 
 ## Project setup
-```
+```sh
+# setup
 yarn install
-```
 
-### Compiles and hot-reloads for development
-```
+# compiles and hot-reloads for development
 yarn run serve
-```
 
-### Compiles and minifies for production
-```
-yarn run build
-```
-
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
+# lints and fixes files
 yarn run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Build and Deployment
+### Build to dist folder
+```sh
+# compiles and minifies for production
+yarn run build
+```
+
+### Deploy to gh-pages
+```sh
+git add dist
+git commit -m "Build"
+git subtree push --prefix dist origin gh-pages
+```
