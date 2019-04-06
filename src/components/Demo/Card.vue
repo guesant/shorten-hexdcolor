@@ -45,7 +45,7 @@ export default {
   },
   computed: {
     displayColor() {
-      if (this.currentColor.length % 2 == 0 && this.currentColor !== 'pls-clear') {
+      if (this.currentColor.length % 2 === 0 && this.currentColor !== 'pls-clear') {
         return this.currentColor;
       }
       return '09305C';
@@ -62,7 +62,7 @@ export default {
     },
     currentColor() {
       // #ASDFGED -> ADFGED
-      if(this.currentColor !== 'pls-clear') {
+      if (this.currentColor !== 'pls-clear') {
         this.currentColor = defaultColorStyle(this.currentColor);
       }
       this.$emit('input', this.currentColor);

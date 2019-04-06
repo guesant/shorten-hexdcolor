@@ -1,7 +1,7 @@
 <template>
   <div class="github-button">
     <!-- Place this tag where you want the button to render. -->
-    <a :href="url">
+    <a :href="url" target="_blank">
       <div>
         <img class="icon" :src="icon" alt="Icon">
       </div>

@@ -64,14 +64,14 @@ export default {
       }
     }
     code:not(.using-hljs) {
-      padding: .1rem .25rem;
+      padding: .25rem;
       display: inline-block;
 
       font-size: 1rem;
       color: rgba(#030D1A, .8);
 
       background-color: rgba(#030D1A, .1);
-      border: 0.0625rem solid rgba(#030D1A, .1);
+      // border: 0.0625rem solid rgba(#030D1A, .1);
       border-radius: 0.375rem;
     }
 
