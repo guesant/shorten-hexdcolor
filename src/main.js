@@ -1,6 +1,8 @@
 import Vue from 'vue';
+import Meta from 'vue-meta';
 import App from './App.vue';
 
+Vue.use(Meta);
 Vue.config.productionTip = false;
 
 new Vue({
