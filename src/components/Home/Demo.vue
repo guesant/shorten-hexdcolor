@@ -8,11 +8,10 @@
         <Card title="Simplified Color" :value="simplifiedColor" readonly />
 
         <Card title="Fork-me" useSlot>
-          <ul>
-            <li>
-              Stars: 0; Forks: 0;
-            </li>
-          </ul>
+          <div class="fork-me">
+            <GithubButton type="Star" />
+            <GithubButton type="Fork" />
+          </div>
         </Card>
       </main>
     </div>
@@ -22,30 +21,32 @@
 <script>
 import shortenHexdColor from 'shorten-hexdcolor';
 import Card from '@/components/Demo/Card.vue';
+import GithubButton from '@/components/Github/Button.vue';
 
 const randomColorChoose = () => {
   const colors = ['ADF039', '16597B', 'A0165D', '1786E2'];
   const choosedIndex = Math.round(Math.random() * colors.length) - 1;
 
   return colors[choosedIndex];
-}
+};
 
 export default {
   components: {
     Card,
+    GithubButton,
   },
   data() {
     return {
       initialColor: randomColorChoose(),
       simplifiedColor: 'VAI CAGAR SEU ADOTADO', // eu tava com raiva nessa hora, mas vou deixar xD
-    }
+    };
   },
   beforeMount() {
     this.simplify();
   },
   methods: {
     simplify() {
-      if(this.initialColor.length > 1) {
+      if (this.initialColor.length > 1) {
         this.simplifiedColor = shortenHexdColor(this.initialColor);
       }
       // console.log(this.initialColor);
@@ -76,6 +77,17 @@ export default {
 
     border-radius: .5rem;
     overflow: hidden;
+
+    .fork-me {
+      display: flex;
+      justify-content: center;
+
+      padding: 0.34375rem 0;
+
+      > * + * {
+        margin-left: 1rem;
+      }
+    }
   }
 }
 </style>
@@ -86,7 +98,7 @@ export default {
     .title {
       text-align: center;
     }
-    .cards {   
+    .cards {
       grid-template-columns: 1fr;
 
       max-width: 25rem;
