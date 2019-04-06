@@ -1,6 +1,8 @@
 # shorten-hexdcolor
 The best package to simplify hexadecimal colors
 
+**Looking for the source code of the website?** It's in the [website branch](https://github.com/gabrodbr/shorten-hexdcolor/tree/website).
+
 ## Install
   With NPM:
   ```sh
