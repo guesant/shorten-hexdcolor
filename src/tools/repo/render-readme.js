@@ -17,7 +17,7 @@ const md = mdit({
       try {
         return hlpre(hljs.highlight(lang, str, true).value);
       } catch (__) {
-        console.error(__);
+        // console.error(__);
       }
     }
 

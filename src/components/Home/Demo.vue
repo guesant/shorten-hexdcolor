@@ -51,7 +51,7 @@ export default {
       } else {
         this.simplifiedColor = 'pls-clear';
       }
-      console.log(this.initialColor);
+      // console.log(this.initialColor);
     },
   },
   watch: {
