@@ -38,8 +38,8 @@
     width: 100%;
     height: 8rem;
     bottom: 0;
-    
-    background: no-repeat url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTM2NiIgaGVpZ2h0PSIyMDgiIHZpZXdCb3g9IjAgMCAxMzY2IDIwOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTM2NiAwVjIwOEgwTDEzNjYgMFoiIGZpbGw9IiNFMUVCRjciLz48L3N2Zz4=');
+
+    background: no-repeat url('~@/assets/img/intro-transition.svg');
     background-size: 100% 100%;
     background-position: 0 0;
   }
@@ -105,4 +105,3 @@
   }
 }
 </style>
-

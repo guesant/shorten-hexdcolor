@@ -6,8 +6,8 @@
         <a href="https://gabrielrodrigues.dev" target="_blank">
         Gabriel Rodrigues
         </a>
-        under 
-        <a href="#" target="_blank">
+        under
+        <a href="https://github.com/gabrodbr/shorten-hexdcolor/blob/master/LICENSE" target="_blank">
           MIT license.
         </a>
       </p>
@@ -28,7 +28,7 @@ export default {
       lindeza: RoIcon,
     };
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -43,15 +43,15 @@ export default {
     p {
       font-size: 1.125rem;
       // line-height: 1.75;
-      
+
       color: rgba(#E1EBF7, .6);
-  
+
       a, .destak {
         color: #E1EBF7;
       }
       a {
         text-decoration: none;
-        
+
       }
     }
 
