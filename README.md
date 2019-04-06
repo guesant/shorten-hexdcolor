@@ -1,4 +1,6 @@
-# Website demo for shorten-hexdcolor
+# Website for shorten-hexdcolor
+**Looking for the source code of the package?** It's in the [master branch](https://github.com/gabrodbr/shorten-hexdcolor/tree/master).
+
 Official website link: [https://gabrodbr.github.io/shorten-hexdcolor](https://gabrodbr.github.io/shorten-hexdcolor)
 
 ## Project setup
