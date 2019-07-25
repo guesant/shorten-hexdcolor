@@ -7,7 +7,7 @@
     "dev:build": "gulp build",
     "dev:watch": "gulp watch"
   },
-  "repository": "https://github.com/gabrodbr/shorten-hexdcolor.git",
+  "repository": "https://github.com/guesant/shorten-hexdcolor.git",
   "author": "Gabriel Rodrigues <jipacoding@gmail.com>",
   "license": "MIT",
   "devDependencies": {
