@@ -1,6 +1,6 @@
 {
   "name": "shorten-hexdcolor",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "asd",
   "main": "lib/index.js",
   "scripts": {
