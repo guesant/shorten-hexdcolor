@@ -1,7 +1,7 @@
 import splitColor from '../tools/standardize/split-color';
 import preventOverflowHex from '../tools/others/prevent-overflow-hex';
 
-const shortenHexdColor = (hexColor) => {
+export default (hexColor) => {
   // Tratar a entrada do usuário.
   // Exemplo: hexColor = '#deea2e' => hexNumber = 'DEEA2E'
   const hexNumber = splitColor(hexColor);
@@ -64,5 +64,3 @@ const shortenHexdColor = (hexColor) => {
 
   return shortedHexdColor.join('');
 };
-
-export default shortenHexdColor;
